@@ -1,21 +1,70 @@
+<!DOCTYPE html>
+<html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Made with Thimble</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/theme/ambiance.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/mode/javascript/javascript.js"></script>
-  <script src="./main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
-
 <body>
+<h1>Rellat Code Prototyping</h1>
   <form method="POST" action="http://httpbin.org/post">
-    <h1>Add Line Widget on CodeMirror</h1>
-
+    <div id="comment-john" style="background:#fee;color:#844;width:300px;padding:8px;margin-bottom:5px;cursor:pointer;display:inline-block;">Add Comment John</div>
+    <div id="comment-jane" style="background:#fee;color:#844;width:300px;padding:8px;margin-bottom:5px;cursor:pointer;display:inline-block;">Add Comment Jane</div>
     <textarea id="my-text" name="my-text" rows="10" cols="50">
-var myCodeMirror = CodeMirror(document.body, {
-  value: "function myScript(){return 100;}\n",
-  mode:  "javascript"
-});
-</textarea>
+var widgets = []
+function updateHints() {
+  editor.operation(function(){
+    for (var i = 0; i < widgets.length; ++i)
+      editor.removeLineWidget(widgets[i]);
+    widgets.length = 0;
 
-    <div id="test">Add Line Widget on current cursor</div>
+    JSHINT(editor.getValue());
+    for (var i = 0; i < JSHINT.errors.length; ++i) {
+      var err = JSHINT.errors[i];
+      if (!err) continue;
+      var msg = document.createElement("div");
+      var icon = msg.appendChild(document.createElement("span"));
+      icon.innerHTML = "!!";
+      icon.className = "lint-error-icon";
+      msg.appendChild(document.createTextNode(err.reason));
+      msg.className = "lint-error";
+      widgets.push(editor.addLineWidget(err.line - 1, msg, {coverGutter: false, noHScroll: true}));
+    }
+  });
+  var info = editor.getScrollInfo();
+  var after = editor.charCoords({line: editor.getCursor().line + 1, ch: 0}, "local").top;
+  if (info.top + info.clientHeight < after)
+    editor.scrollTo(null, after - info.clientHeight + 3);
+}
+
+window.onload = function() {
+  var sc = document.getElementById("script");
+  var content = sc.textContent || sc.innerText || sc.innerHTML;
+
+  window.editor = CodeMirror(document.getElementById("code"), {
+    lineNumbers: true,
+    mode: "javascript",
+    value: content
+  });
+
+  var waiting;
+  editor.on("change", function() {
+    clearTimeout(waiting);
+    waiting = setTimeout(updateHints, 500);
+  });
+
+  setTimeout(updateHints, 100);
+};
+
+"long line to create a horizontal scrollbar, in order to test whether the (non-inline) widgets stay in place when scrolling to the right";
+
+</textarea>
   </form>
 </body>
+</html>

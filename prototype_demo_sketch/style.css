@@ -1,0 +1,15 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.CodeMirror {
+  height: 700px;
+}
+.reply-container {
+  font-family:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  color: #000;
+  padding: 10px 0 10px 0;
+}
+.reply-container .reply-box {
+  padding:0 0 0 20px;
+  width:500px;
+}
