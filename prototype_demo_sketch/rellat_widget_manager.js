@@ -8,30 +8,50 @@ var rellatreply = {
 
   var identicon = ['data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAADAFBMVEX///+ZjNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUd6f7AAABAHRSTlP//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmfXxgAABnNJREFUeNoBaAaX+QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEAAAAAAAABAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQAAAAAAAAEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAAAAAAAAAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEAAAAAAAABAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQAAAAAAAAEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAAAAAAAAAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE5oB1S3l1P8AAAAASUVORK5CYII=','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAADAFBMVEX////YjMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4LXa3AAABAHRSTlP//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKmfXxgAABnNJREFUeNoBaAaX+QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkroB+f7ZZ3IAAAAASUVORK5CYII='];
 var personname = ['John Doe','Jane Doe'];
+var currentperson = 0;
 
 function addReplyInput(editorline, person) {
   removeReplyInput();
-  var eline = (editorline) ? editorline : editor.getCursor().line;
-  var widget = getWidget(eline);
+  currentperson = person;
   var widgetdom = document.createElement("DIV");
   widgetdom.setAttribute("class", "reply-box");
   widgetdom.setAttribute("id", "reply-input-container-" + rellatreply.counter);
-  widgetdom.innerHTML = '<div class="reply" style="margin:0;padding:5px; background-color:#f6f7f9;"><div class="reply-img" style="padding:5px; display:inline-block;"><img src="'+identicon[person]+'"></div><div class="reply-text-container" style="margin:0;padding-top:5px; vertical-align: top; display:inline-block;line-height:1.4;width:424px;height:37px;"><div class="reply-input-box" style="border:1px solid #aaa; background:#ffffff;"><div id="reply-input-'+ rellatreply.counter +'" class="reply-input-cell" style="padding:8px;color:#000;" contenteditable="true" onkeydown="return addReply(event,'+ rellatreply.counter +')" onfocus="return replyinputfocus(event)" tabindex="-1"><span style="color:#888;">답글 달기...</span></div></div></div></div>';
-  if(widget !== undefined) {
-    //put input in the widget
-    widget.node.appendChild(widgetdom);
-    widget.changed();
+  widgetdom.innerHTML = '<div class="reply" style="margin:0;padding:5px; background-color:#f6f7f9;"><div class="reply-img" style="padding:5px; display:inline-block;"><img src="'+identicon[person]+'"></div><div class="reply-text-container" style="margin:0;padding-top:5px; vertical-align: top; display:inline-block;line-height:1.4;width: calc(100% - 60px);min-height:37px;"><div class="reply-input-box" style="border:1px solid #aaa; background:#ffffff;"><div id="reply-input-'+ rellatreply.counter +'" class="reply-input-cell" style="padding:8px;color:#000;" contenteditable="true" onkeydown="return addReply(event,'+ rellatreply.counter +')" onfocus="return replyinputfocus(event)" tabindex="-1"><span style="color:#888;">답글 달기...</span></div></div></div></div>';
+  
+  var widget, containerParent;
+  if (typeof editorline == "string") {
+    for (var i = 0; i < rellatreply.replies.length; ++i) {
+      if(rellatreply.replies[i].containerID == editorline) {
+        widget = rellatreply.replies[i].widget;
+        containerParent = document.getElementById(rellatreply.replies[i].containerID);
+        if( widget.node != containerParent.parentNode) containerParent = containerParent.parentNode;
+        containerParent.appendChild(widgetdom);
+        widget.changed();
+        break;
+      }
+    }
+    if (!widget) { console.log("Cannot insert reply input because node doesn't exist."); return; }
   }else {
-    //make a widget
-    var newdom = document.createElement("DIV");
-    newdom.setAttribute("class", "reply-container");
-    newdom.appendChild(widgetdom)
-    widget = editor.addLineWidget(eline, newdom);
+    var eline = (editorline) ? editorline : editor.getCursor().line;
+    widget = getWidget(eline);
+    if(widget !== undefined) {
+      //put input in the widget
+      widget.node.appendChild(widgetdom);
+      widget.changed();
+    }else {
+      //make a widget
+      var newdom = document.createElement("DIV");
+      newdom.setAttribute("class", "reply-container");
+      newdom.appendChild(widgetdom)
+      widget = editor.addLineWidget(eline, newdom);
+    }
+    containerParent = widget.node;
   }
+  
   rellatreply.reinputs.push({
     person: person,
     containerID: "reply-input-container-" + rellatreply.counter,
-    containerParent: widget.node,
+    containerParent: containerParent,
     textID: "reply-input-"+ rellatreply.counter,
     widget: widget
   });
@@ -61,7 +81,7 @@ function addReply(event,idcounter) {
     var replydom = document.createElement("DIV");
     replydom.setAttribute("class", "reply-box");
     replydom.setAttribute("id", "reply-" + rellatreply.counter);
-    replydom.innerHTML = '<div class="reply" style="margin:0;padding:5px; background-color:#f6f7f9;border-top: 1px solid #aaaaff;"><div class="reply-img" style="padding:5px; display:inline-block;"><img src="'+identicon[targetinput.person]+'"></div><div class="reply-text-container" style="margin:0;padding-top:5px; vertical-align: top; display:inline-block;line-height:1.4;"><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;word-wrap:break-word" href="#"><span>'+personname[targetinput.person]+'</span></a><span>'+ textdom.textContent +'</span><div><a style="text-decoration:none;color:#365899;" href="#"><span>Like</span></a> · <a style="text-decoration:none;color:#365899;" href="#"><span>Reply</span></a> · <a style="color:#888888;text-decoration:none;" href="#"><span>5 minute ago</span></a></div></div><div class="reply-button" style="color:#888888;float:right;visibility: hidden;">x</div></div>';
+    replydom.innerHTML = '<div class="reply" style="margin:0;padding:5px; background-color:#f6f7f9;border-top: 1px solid #aaaaff;"><div class="reply-img" style="padding:5px; display:inline-block;"><img src="'+identicon[targetinput.person]+'"></div><div class="reply-text-container" style="margin:0;padding-top:5px; vertical-align: top; display:inline-block;line-height:1.4;max-width: calc(100% - 60px);word-wrap:break-word;"><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>'+personname[targetinput.person]+'</span></a><span>'+ textdom.textContent +'</span><div><a style="text-decoration:none;color:#365899;" href="#"><span>Like</span></a> · <a style="text-decoration:none;color:#365899;" href="#" onclick="return addReplyInput(\'reply-'+ rellatreply.counter +'\',currentperson)"><span>Reply</span></a> · <a style="color:#888888;text-decoration:none;" href="#"><span>5 minute ago</span></a></div></div><div class="reply-button" style="color:#888888;float:right;visibility: hidden;">x</div></div>';
     //targetinput.containerParent.insertBefore(replydom, document.getElementById("reply-input-container-" + idcounter));
     targetinput.containerParent.appendChild(replydom);
     //targetinput.widget.changed();
@@ -70,12 +90,13 @@ function addReply(event,idcounter) {
       person: targetinput.person,
       level: 0,
       order: 0,
-      containerID: "reply-input-container-" + rellatreply.counter,
-      containerParent: targetinput.widget.node.firstChild,
+      containerID: "reply-" + rellatreply.counter,
+      containerParent: targetinput.containerParent,
       widget: targetinput.widget
     });
     rellatreply.counter++;
-    addReplyInput(targetinput.widget.line, targetinput.person);
+    if(targetinput.containerParent == targetinput.widget.node) addReplyInput(targetinput.widget.line, targetinput.person);
+    else addReplyInput(targetinput.containerParent.getAttribute('id'), targetinput.person);
   }
 }
 
@@ -90,13 +111,22 @@ function removeReplyInput() {
 }
 
 function getWidget(linehandle) {
+  if (typeof linehandle == "string") {
+    for (var i = 0; i < rellatreply.replies.length; ++i) {
+      if(rellatreply.replies[i].containerID == linehandle) {
+        return rellatreply.replies[i].widget;
+      }
+    }
+    return undefined;
+  }
+  
   var no = linehandle, line = linehandle
   if (typeof linehandle == "number") { line = editor.getLineHandle(no) }
   else { no = editor.getLineNumber(line) }
   for (var i = 0; i < rellatreply.replies.length; ++i) {
-    console.log('get widget line from '+ no + ' loop ' + i + ' line '+ editor.getLineNumber(rellatreply.replies[i].widget.line));
+    //console.log('get widget line from '+ no + ' loop ' + i + ' line '+ editor.getLineNumber(rellatreply.replies[i].widget.line));
     if(editor.getLineNumber(rellatreply.replies[i].widget.line) == no) {
-      console.log('match ' + 'get widget line from '+ no + ' loop ' + i + ' line '+ editor.getLineNumber(rellatreply.replies[i].widget.line));
+      //console.log('match ' + 'get widget line from '+ no + ' loop ' + i + ' line '+ editor.getLineNumber(rellatreply.replies[i].widget.line));
       return rellatreply.replies[i].widget;
     }
   }
