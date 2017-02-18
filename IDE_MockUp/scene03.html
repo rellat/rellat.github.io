@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rellat IDE MockUp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/theme/ambiance.css">
+  <link href="./css/bootstrap.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="./css/codemirror.css" rel="stylesheet"> -->
+  <link href="./css/doceditable.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rawgit.com/nicoespeon/gitgraph.js/develop/src/gitgraph.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <!--<script src="./js/codemirror.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.23.0/mode/javascript/javascript.js"></script>
+  <script src="./js/doceditable.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/markdown.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+  <script src="https://rawgit.com/nicoespeon/gitgraph.js/develop/src/gitgraph.js"></script>
+  <script src="rellat.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo" style="float:left">
+      <img src="./img/rellat_logo_white.png" alt="Rellat Logo">
+    </div>
+    <div class="profile-bar" style="float:right">
+      <img src="./img/chase_thumb.jpg" alt="Profile">
+    </div>
+    <div class="project-title" style="text-align:center;">
+      Rellat Development Project
+    </div>
+  </header>
+  <div style="width:100%;height:calc(100vh - 40px);">
+    <div style="float:left;width:100px;background:#2e2e2e;color:white;height:100%;">
+      <div style="padding:8px;">Directory</div>
+      <div style="padding:8px;">Story Borad</div>
+      <div style="padding:8px;">Kanban</div>
+      <div style="padding:8px;">Branch</div>
+      <div style="padding:8px;">Activity Log</div>
+      <div style="padding:8px;">Chat</div>
+    </div>
+
+
+        <div style="position:relative; float:right;height:100%;">
+          <div style="z-index:999; position:absolute; right:0; width:400px; height:100%; vertical-align:bottom;">
+            <div style="background:#ccc;width:100%;height:100%;">
+              <div class="chat-header">
+                <span style="font-size:20px;">Chat</span>
+              </div>
+              <div class="chatArea">
+                <div class="bubbledLeft">
+                  <div class="chat-img"><img width="40px" src="./img/kenneth_thumb.jpg"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Kenneth Lee</span></a> <span>코드 창에 댓글 다는 방법은 어떻게 하는 것이 좋을까요?</span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>15 minutes ago </span></a></div></div>
+                </div>
+                <div class="bubbledRight">
+                  <div class="chat-img"><img width="40px" src="./img/chase_thumb.jpg"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Chase Lee</span></a> <span>오른쪽 마우스 클릭 메뉴에서 선택하도록 하려고 합니다.</span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>10 minutes ago </span></a></div></div>
+                </div>
+                <div class="bubbledLeft">
+                  <div class="chat-img"><img width="40px" src="./img/kenneth_thumb.jpg"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Kenneth Lee</span></a> <span>눈에 보이면 버튼이 있으면 사용하기 편할 것 같은데요.</span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>10 minutes ago </span></a></div></div>
+                </div>
+                <div class="bubbledLeft">
+                  <div class="chat-img"><img width="40px" src="./img/a01_thumb.png"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Lesser Panda</span></a> <span>전 개인적으로 단축키를 지정해서 사용하면 편하고 좋습니다.</span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>5 minutes ago </span></a></div></div>
+                </div>
+                <div class="bubbledLeft">
+                  <div class="chat-img"><img width="40px" src="./img/kenneth_thumb.jpg"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Kenneth Lee</span></a> <span>그것도 가능하겠네요.</span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>4 minutes ago </span></a></div></div>
+                </div>
+                <div class="bubbledLeft">
+                  <div class="chat-img"><img width="40px" src="./img/a01_thumb.png"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Lesser Panda</span></a> <span>보이는 버튼을 넣으려면 코드 창의 줄번호 옆에 넣는게 좋겠습니다.</span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>a minute ago </span></a></div></div>
+                </div>
+                <div class="bubbledRight">
+                  <div class="chat-img"><img width="40px" src="./img/chase_thumb.jpg"></div>
+                  <div class="chat-text"><div><a style="color:#365899;margin-right:5px;font-weight:bold;text-decoration:none;" href="#"><span>Chase Lee</span></a> <span>좋은 의견입니다. 댓글 버튼을 코드 창 번호줄에 넣어서 마우스를 올리면 보이게 만들겠습니다. </span></div><div><a style="color:#888888;text-decoration:none;" href="#"><span>a minute ago </span></a></div></div>
+                </div>
+              </div>
+              <div class="chat-footer">
+                <div class="chat-input-img" style="padding:5px; display:inline-block;"><img src="./img/chase_thumb.jpg"></div>
+                <div class="chat-input"><div class="chat-input-box" style="border:1px solid #aaa; background:#ffffff;"><div class="chat-input-cell" style="padding:8px;color:#000;" contenteditable="true" tabindex="-1"><span style="color:#888;">입력하기 ...</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div style="width:calc(100hh - 100px);height:100%;">
+
+      <div class="pane" style="width:100%;height:calc(100% - 150px);">
+        <div class="pane" style="width:45%;height:100%;display:inline-block;">
+          <div class="tl_container" style="width:100%;height:100%;">
+            <ul class="tl_list">
+              <li><a href="#A">rellat_main.js</a></li>
+              <li style="background-color: #444;width:10px;padding:0;margin:0;"><a href="#B">+</a></li>
+            </ul>
+            <section class="tl_section code_editor_dark">
+              <textarea id="rellat_code01" name="rellat-code" rows="10" cols="10">
+/* global CodeMirror */
+/* 실행해보려면 위 Preview에서 Preview running Application 누르고
+// 주소창에 /Rellat/prototype_demo_sketch/rellat_code_demo.html 를
+// 입력하십시오.
+*/
+var editor = CodeMirror;
+// CodeMirror 오브젝트를 전역변수에 넣는다.
+
+var rellatreply = { //댓글을 저장하는 전역변수이다.
+replies: [], // 댓글 오브젝트를 저장하는 배열이다. reply { person, level, order, containerID, containerParent, widget }
+reinputs: [], // 댓글입력노드를 저장하는 배열이다. replyInput { person, containerID, containerParent, textID, widget }
+counter: 0 // 댓글 생성시 부여하는 ID를 세는 카운터이다.
+};
+
+var identicon = ['',''];
+// 댓글을 달때 사람사진 란에 들어갈 아이덴티콘을 담은 배열이다.
+var personname = ['John Doe','Jane Doe'];
+// 댓글을 달때 표시한 사람 이름을 담은 배열이다.
+var currentperson = 0;
+// 현재 댓글을 다는 사람 계정을 선택하는 변수이다. 0: John, 1: Jane
+
+function addReplyInput(editorline, person) {
+  // 댓글 입력 노드를 삽입하는 함수이다.
+  // editorline은 에디터 줄의 번호나 lineHandle 오브젝트, 혹은 이미 등록된 댓글 노드의 id가 될 수 있다.
+  // person은 댓글을 다는 계정이다.
+  removeReplyInput(); // 댓글 입력 노드가 여러개 생기지 않도록 이전에 생성된 입력노드를 제거한다.
+  currentperson = person;
+  var widgetdom = document.createElement("DIV"); // 삽입할 노드를 생성한다.
+  widgetdom.setAttribute("class", "reply-box");
+  widgetdom.setAttribute("id", "reply-input-container-" + rellatreply.counter);
+  widgetdom.innerHTML = '<div class="reply" style="margin:0;padding:5px; background-color:#f6f7f9;"><div class="reply-img" style="padding:5px; display:inline-block;"><img src="'+identicon[person]+'"></div><div class="reply-text-container" style="margin:0;padding-top:5px; vertical-align: top; display:inline-block;line-height:1.4;width: calc(100% - 60px);min-height:37px;"><div class="reply-input-box" style="border:1px solid #aaa; background:#ffffff;"><div id="reply-input-'+ rellatreply.counter +'" class="reply-input-cell" style="padding:8px;color:#000;" contenteditable="true" onkeydown="return addReply(event,'+ rellatreply.counter +')" onfocus="return replyinputfocus(event)" tabindex="-1"><span style="color:#888;">답글 달기...</span></div></div></div></div>';
+  // 미리 작성한 html 템플레이트를 사용한다. https://thimbleprojects.org/mohawkduck/194618/
+
+  // editorline 변수가 에디터 줄의 번호인지, lineHandle 오브젝트인지, 이미 등록된 댓글 노드의 id인지 알아낸다.
+  var widget, containerParent;
+  if (typeof editorline == "string") {
+    // editorline 변수가 이미 등록된 댓글 노드의 id인 경우
+    for (var i = 0; i < rellatreply.replies.length; ++i) {
+      if(rellatreply.replies[i].containerID == editorline) {
+        // 해당 id를 rellatreply.replies 배열에서 찾는다.
+        widget = rellatreply.replies[i].widget;
+        containerParent = document.getElementById(rellatreply.replies[i].containerID);
+        // widget, containerParent는 댓글입력노드를 rellatreply.reinputs에 저장할 때 필요하다.
+        if( widget.node != containerParent.parentNode) containerParent = containerParent.parentNode;
+        // 댓글노드가 2단계까지만 달리도록 고정하는 조건문이다.
+        containerParent.appendChild(widgetdom);
+        // 댓글 노드 하단에 댓글 입력 노드를 삽입한다.
+        widget.changed();
+        // CodeMirror 에디터의 높이를 재설정해준다. 재설정 안하면 에디터 높이를 잘못 계산해서 텍스트 커서가 이상한 곳에 가서 붙게된다.
+        break;
+      }
+    }
+    if (!widget) { console.log("Cannot insert reply input because node doesn't exist."); return; }
+    // 없는 노드의 id를 참조한 경우
+  }else {
+    var eline = (editorline) ? editorline : editor.getCursor().line;
+    // editorline이 false, undefined 등인 경우 현재 텍스트 커서 위치를 가져온다.
+    widget = getWidget(eline);
+    // rellatreply.replies 배열을 뒤져서 이미 생성된 line widget을 가져온다.
+    if(widget !== undefined) {
+      // put input in the widget
+      widget.node.appendChild(widgetdom);
+      widget.changed();
+    }else {
+      // 해당 줄에 이미 생성된 line widget이 없는 경우
+      // make a widget
+      var newdom = document.createElement("DIV");
+      newdom.setAttribute("class", "reply-container");
+      newdom.appendChild(widgetdom);
+      widget = editor.addLineWidget(eline, newdom);
+      // line widget을 삽입한다.
+    }
+    containerParent = widget.node;
+  }
+}
+</textarea>
+            </section>
+          </div>
+          </div>
+        <div class="pane" style="width:calc(55% - 100px);height:100%;display:inline-block;">
+          <div class="tl_container" style="width:100%;height:30%;">
+            <ul class="tl_list">
+              <li><a href="#A">rellat.reldoc</a></li>
+              <li style="background-color: #444;width:10px;padding:0;margin:0;"><a href="#B">+</a></li>
+            </ul>
+            <section class="tl_section">
+              <textarea id="rellat_doc01" name="rellat-doc" rows="10" cols="10">
+## Rellat Development Project
+
+We will tell you a story about a good programming habit, and help you to get there.
+
+</textarea>
+            </section>
+          </div>
+          <div class="tl_container" style="width:100%;height:40%;">
+            <ul class="tl_list">
+              <li><a href="#A">Rellat.board</a></li>
+              <li style="background-color: #444;width:10px;padding:0;margin:0;"><a href="#B">+</a></li>
+            </ul>
+            <section class="tl_section">
+              <div id="rellat_board01" class="drag-container">
+                <ul class="drag-list">
+                  <li class="drag-column drag-column-on-hold">
+                    <span class="drag-column-header">
+                      <h2>Long Term Goals</h2>
+                    </span>
+                    <ul class="drag-inner-list" id="1">
+                      <li class="drag-item">Learn how to code.</li>
+                      <li class="drag-item">Get a examples.</li>
+                      <li class="drag-item">Test it.</li>
+                      <li class="drag-item">Reproduce it.</li>
+                      <li class="drag-item">Deduce an alorithm.</li>
+                      <li class="drag-item">Reassemble algorithm</li>
+                    </ul>
+                    <div class="drag-column-footer">
+                      <div>Add a card ...</div>
+                    </div>
+                  </li>
+                  <li class="drag-column drag-column-in-progress">
+                    <span class="drag-column-header">
+                      <h2>In Progress</h2>
+                    </span>
+                    <ul class="drag-inner-list" id="2">
+                      <li class="drag-item">Make a Demo.</li>
+                    </ul>
+                    <div class="drag-column-footer">
+                      <div>Add a card ...</div>
+                    </div>
+                  </li>
+                  <li class="drag-column drag-column-needs-review">
+                    <span class="drag-column-header">
+                      <h2>Needs Review</h2>
+                    </span>
+                    <ul class="drag-inner-list" id="3">
+                      <li class="drag-item">Check Cloud9.</li>
+                    </ul>
+                    <div class="drag-column-footer">
+                      <div>Add a card ...</div>
+                    </div>
+                  </li>
+                  <li class="drag-column drag-column-approved">
+                    <span class="drag-column-header">
+                      <h2>Completed</h2>
+                    </span>
+                    <ul class="drag-inner-list" id="4">
+                      <li class="drag-item">Add reply widget.</li>
+                    </ul>
+                    <div class="drag-column-footer">
+                      <div>Add a card ...</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="tl_container"  style="width:100%;height:30%;">
+            <ul class="tl_list">
+              <li><a href="#A">Branch</a></li>
+              <li style="background-color: #444;"><a href="#A">Activity</a></li>
+              <li style="background-color: #444;width:10px;padding:0;margin:0;"><a href="#B">+</a></li>
+            </ul>
+            <section class="tl_section">
+              <div id="rellat_branch01">
+                <canvas id="gitGraph"></canvas>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="pane" style="height:150px;">
+        <div class="tl_container">
+          <ul class="tl_list">
+            <li><a href="#A">terminal</a></li>
+          </ul>
+          <section class="tl_section">
+            <textarea id="rellat_terminal01" name="rellat-terminal" rows="10" cols="10">
+chase@rellat-vm:~$
+</textarea>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
