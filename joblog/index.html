@@ -29,10 +29,11 @@
     }
 
     .ql-video {
-      width: 853px;
-      height: 480px;
+      /*width: 853px;
+      height: 480px;*/
       margin: auto;
     }
+    iframe html, iframe body {margin: 0px; padding: 0px; overflow: hidden;}
   </style>
 
 </head>
@@ -84,156 +85,10 @@
       </span>
     </div>
   </div>
-  <div id="quill-container">
-    <h1 class="ql-align-center">Rellat Job Log</h1>
-    <p><br></p>
-    <p><br></p>
-    <h2>개발 목표와 방향</h2>
-    <p class="ql-align-center"><img src="https://lh4.googleusercontent.com/JAcZXKbLUwCvwFjpYio_yoFFUSAqiba2Kdu3Oz7L86tv2Z3WBKetJvKRvYwRxHQmsX3pxkTAjRU_fvEYHbLwnzaen92ZieJNW9fU9o0rEjlXpP_rGbAxGwTkvh-Uj5RG-jFlrh_J" height="511" width="756"></p>
-    <p class="ql-align-center">2017년 2월 17일 릴랏 프로토타입 목업 데모 스크린샷</p>
-    <p>&nbsp;</p><iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/imJi6nFJXhQ?showinfo=0"></iframe>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2>릴랏 서비스의 기술적인 구조</h2>
-    <ol>
-      <li>doc: 공동문서, 계획을 작성하는 창</li>
-      <li>board: Kanban 스타일 애자일 보드를 작성하는 창</li>
-      <li>code: 코드를 작성하는 창</li>
-      <li>log: 코드 수정사항이 기록되는 창.</li>
-      <li>branch: git 방식 가지치기를 관리하는 창</li>
-      <li>chat: gitter와 유사한 개발자 채팅을 하는 창</li>
-      <li>terminal: 가상환경의 터미널을 사용하는 창</li>
-    </ol>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2>사용자 입장에서 릴랏의 정보처리 과정</h2>
-    <p>릴랏은 사용자가 좋은 프로그래밍 습관, 즉 릴랏 사고방식을 배울 수 있게 도와주는 도구입니다.</p>
-    <ol>
-      <li>우리가 코딩 동시 협업 서비스를 사용해서 사람들에게 실시간으로 코드를 어떻게 치고 주석을 어떻게 다는지 보여주어요.</li>
-      <li class="ql-indent-1">주석을 달 때는 코드에서 무슨 일이 일어나는지 이야기로 풀어서 설명을 해주어요.</li>
-      <li class="ql-indent-1">동시 협업 프로그램은 구글문서 같은 것이에요.</li>
-      <li>우리가 코드와 주석을 쓰는 것을 보면서 힌트를 얻은 사람들이 코드와 주석을 같이 써보아요.</li>
-      <li class="ql-indent-1">인터넷 게시판, SNS처럼 코드와 주석에 댓글을 달고 의견을 교환해 보아요.</li>
-      <li class="ql-indent-1">더 나은 코드를 생각해 내면 제안을 하고 등록을 해보아요. 위키백과처럼요!</li>
-      <li>그렇게 해서 사람들이 똑똑해지고 관심이 생기면 좀 더 복잡한 오픈소스 프로젝트를 함께 해보아요.</li>
-      <li class="ql-indent-1">다른 사람들을 많이 가르쳐주고 프로젝트에 많이 기여하는 사람에게는 보상과 혜택을 주어요!</li>
-      <li class="ql-indent-1">사람들 각자 능력에 맞는 프로젝트를 추천해 주어요.</li>
-    </ol>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2>정보처리 과정기록</h2>
-    <p>시나리오 목업과 프로토타입의 기획 과정은 <a href="https://kr.rellat.com/2017/02/2.html" target="_blank" style="color: rgb(17, 85, 204);">릴랏 강의 2</a> 글을 참고하세요.</p>
-    <p>&nbsp;</p>
-    <p>소켓 서버를 사용하는 협업 코드 에디터 오픈 소스 프로젝트를 검색했다.</p>
-    <p><a href="https://github.com/search?l=JavaScript&amp;o=desc&amp;q=editor+socket&amp;s=stars&amp;type=Repositories&amp;utf8=%E2%9C%93" target="_blank" style="color: rgb(17, 85, 204);">editor with socket server</a> github 검색 결과</p>
-    <p>&nbsp;</p>
-    <p>테스트 해볼 2개의 프로젝트를 정했다. 선정 기준은 내 입장에서 분석하고 구현이 가능하고, 내가 원하는 기능이 있는지 여부였다.</p>
-    <p>1. <a href="https://github.com/kwhinnery/groupeditor" target="_blank" style="color: rgb(17, 85, 204);">Groupeditor</a> A group text editor using socket.io - github</p>
-    <p>코드가 가장 짧고 쉽다.</p>
-    <p>2. <a href="https://github.com/RationalCoding/multihack" target="_blank" style="color: rgb(17, 85, 204);">Multihack</a> Real-Time Editor, Web Host, Voice Chat, and Social Network.</p>
-    <p>프로젝트 별로 룸이 나누어진다. 파일트리가 있다. 협업 코드 에디터가 있다.</p>
-    <p>&nbsp;</p>
-    <p>위 두 프로젝트가 다 node.js와 Socket.io를 사용하고 있는데 내가 관련 개발 경험이 없었다.</p>
-    <p>Node.js 와 Socket.io 의 사용방법을 공부하려고 작은 단위 프로젝트를 기획했다.</p>
-    <p><a href="https://github.com/kifhan/FlappyConnection" target="_blank" style="color: rgb(17, 85, 204);">Flappy Connection</a> github</p>
-    <p>Node.js + Socket.io + p5.js 를 사용해서 웹온라인 게임을 만들었다. 플래피버드 카피</p>
-    <p>&nbsp;</p>
-    <p><a href="https://github.com/kwhinnery/groupeditor" target="_blank" style="color: rgb(17, 85, 204);">Groupeditor</a>를 fork하여 CodeMirror를 연결해 보았다. 원본은 Ace code editor를 사용한다.</p>
-    <p><a href="https://github.com/kifhan/groupmirror" target="_blank" style="color: rgb(17, 85, 204);">kifhan/groupmirror</a> github</p>
-    <p>에디터의 변경이 일어날 때마다 내용을 모든 클라이언트에게 전송해서 현재 상태를 동기화 하는 방식이다.</p>
-    <p>또 한글을 칠때 자소가 다 입력되기 전에 에디터 내용이 고쳐지는 것 때문에 글자가 복제 생성되거나 깨지고 흩어져서 입력되는 문제가 있다.</p>
-    <p>&nbsp;</p>
-    <p><a href="https://github.com/kifhan/multihack-web" target="_blank" style="background-color: rgb(255, 255, 255); color: rgb(3, 102, 214);">Multihack</a>을 분석해 보았다.</p>
-    <p>파일을 클라이언트 브라우저에 저장한다. 서버는 같은 room 접속자 중 같은 문서를 보고 있는 접속자들끼리 CodeMirror의 change 이벤트에서 나오는 변경내용을 보내서 동기화한다. 방 구성원이 전부 나가면 방이 자동으로 삭제된다. 한글 입력이 잘 된다.</p>
-    <p>&nbsp;</p>
-    <p><a href="https://github.com/kwhinnery/groupeditor" target="_blank" style="color: rgb(17, 85, 204);">Groupeditor</a>는 Editor node 전체의 value를 통째로 서버에 보내고 서버에서 broadcast하는 방식이다.</p>
-    <p>이렇게 하면 파일의 내용이 길어질수록 서버, 클라이언트의 통신 비용이 커지고 느려지게 된다.</p>
-    <p>어떻게 하면 비용을 적게 들이고 효율적인 통신을 할 수 있을지 생각했다.</p>
-    <p>Code 파일 1개를 커다란 맵으로 생각하고 각 줄 단위로 구분해서 변경사항이 생긴 줄 넘버와 내용을 서버로 보내 동기화하면 어떨까 상상했다.</p>
-    <p>중요한 것은 변경사항을 서버로 보내 동기화하는 것이다. Diff 툴을 사용하면 변경사항만 골라내는 것이 가능하다.</p>
-    <p>이것을 어떻게 활용할지 방법을 검색했다.</p>
-    <p><a href="http://features.jsomers.net/how-i-reverse-engineered-google-docs/" target="_blank" style="color: rgb(17, 85, 204);">how-i-reverse-engineered-google-docs</a> diff를 이용하여 구글 docs 문서 재생기를 만들었다는 내용이다.</p>
-    <p><a href="https://codemirror.net/addon/merge/merge.js" target="_blank" style="color: rgb(17, 85, 204);">Codemirror / addons / merge.js</a> CodeMirror 의 diff / merge 모듈, <a href="https://codemirror.net/demo/merge.html" target="_blank" style="color: rgb(17, 85, 204);">merge demo</a></p>
-    <p><a href="https://code.google.com/p/google-diff-match-patch/" target="_blank" style="color: rgb(17, 85, 204);">google-diff-match-patch</a> 위의 두개 소스 다 구글의 diff-match-patch를 사용했다.</p>
-    <p>&nbsp;</p>
-    <p>여기까지 생각해보니 누가 github에 비슷하게 구현해놓지 않았을까 생각이 들어서 "diff web editor collabo github" 키워드로 검색을 했다.</p>
-    <p><a href="https://github.com/sharelatex/sharelatex" target="_blank" style="color: rgb(17, 85, 204);">Sharelatex</a> open-source online real-time collaborative LaTeX editor - <a href="https://github.com/sharelatex/document-updater-sharelatex/tree/master/app/lib"
-        target="_blank" style="color: rgb(17, 85, 204);">google diff-match-patch 를 사용</a>한다.</p>
-    <p>&nbsp;</p>
-    <p>그리고 동기화를 하는 중 트래픽 지연, 데이터 처리 시간 지연, 기타 이벤트로 문제가 발생하는 경우에는 어떻게 대처해야 하는가 하는 질문이 들었다.</p>
-    <p>&nbsp;</p>
-    <p>실시간 문서 협업 관련 동기화 기술을 리서치했다.</p>
-    <p>&nbsp;</p>
-    <p class="ql-align-center"><img src="https://lh5.googleusercontent.com/Zh-RTkd5QePr1Le4pUJYKVu1HlU9GignU5ExeQhegxmX1phBvVoqckPaP7GH7MuUa44lrn599N-pc26Lb22rDKtqUosa3jJaWXJvxTiGh33-hQpNN6HxM2a5iH1GqmHZORMmvfPA" alt="Basicot.png" height="250" width="358"></p>
-    <p>&nbsp;</p>
-    <p><a href="https://en.wikipedia.org/wiki/Operational_transformation" target="_blank" style="color: rgb(17, 85, 204);">Operational_transformation</a> Wikipedia</p>
-    <p>&nbsp;</p>
-    <p><a href="https://davidwalsh.name/collaborative-editing-javascript-intro-operational-transformation" target="_blank" style="color: rgb(17, 85, 204);">Collaborative-editing-javascript-intro-operational-transformation</a> 친절한 설명</p>
-    <p><a href="https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.CollaborativeString" target="_blank" style="color: rgb(17, 85, 204);">gapi.drive.realtime.CollaborativeString</a> Google Realtime API - google docs와 같은 구조이며 OT를
-      사용한다고 한다.</p>
-    <p>&nbsp;</p>
-    <p>사용하는 입장에서 볼때 OT가 하는 정보처리가 무엇인지 생각해보았다.</p>
-    <p>1. 적은 자원을 들여서 서버와 클라이언트의 문서를 실시간으로 동기화한다.</p>
-    <p>2. 문서 내용은 동기화 하면서 클라이언트의 현재 커서 위치, 선택 레인지를 유지한다.</p>
-    <p>3. Undo, Redo가 현재 클라이언트 입장에서 정상적으로 되도록 관리한다.</p>
-    <p>&nbsp;</p>
-    <p>OT의 기술적인 접근 방법이 무엇인지 생각해보았다.</p>
-    <p>1. A 클라이언트가 액션을 오브젝트로 만든다. { type: (insert, delete), index: range, value: text }</p>
-    <p>2. B 클라이언트는 자기 입장에서 A 클라이언트의 액션을 해석한다.</p>
-    <p>3. 서버는 각 클라이언트가 만들어낸 액션과 해석에 불일치가 발생하는지 확인한다.</p>
-    <p>&nbsp;</p>
-    <p>OT lib 후보 / 참고: <a href="http://stackoverflow.com/questions/2043165/operational-transformation-library" target="_blank" style="color: rgb(17, 85, 204);">Operational-transformation-library</a> - stackoverflow</p>
-    <p><a href="https://github.com/GerHobbelt/google-diff-match-patch/blob/master/javascript/diff_match_patch_uncompressed.js" target="_blank" style="color: rgb(17, 85, 204);">google diff_match_patch_uncompressed.js</a></p>
-    <p><a href="https://github.com/kpdecker/jsdiff" target="_blank" style="color: rgb(17, 85, 204);">kpdecker/jsdiff</a></p>
-    <p><a href="https://github.com/ottypes/docs" target="_blank" style="color: rgb(17, 85, 204);">ottypes/docs</a> , <a href="https://github.com/josephg/ShareJS" target="_blank" style="color: rgb(17, 85, 204);">josephg/ShareJS</a> - <a href="https://github.com/share/share-codemirror"
-        target="_blank" style="color: rgb(17, 85, 204);">https://github.com/share/share-codemirror</a></p>
-    <p><a href="https://github.com/Operational-Transformation/ot.js" target="_blank" style="color: rgb(17, 85, 204);">Operational-Transformation/ot.js</a> - <a href="https://github.com/miniturbo/codemirror-ot-example/blob/master/app.js" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/miniturbo/codemirror-ot-example/blob/master/app.js</a></p>
-    <p><a href="https://github.com/gulf/gulf" target="_blank" style="color: rgb(17, 85, 204);">gulf/gulf</a> - <a href="https://github.com/gulf/gulf-editor-codemirror" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/gulf/gulf-editor-codemirror</a></p>
-    <p><a href="https://github.com/y-js/yjs" target="_blank" style="color: rgb(17, 85, 204);">y-js/yjs</a> socket.io + CodeMirror 지원</p>
-    <p>&nbsp;</p>
-    <p>내 입장에서 접근이 쉬운 것, 내가 원하는 기능을 구현하기 쉬운 것을 선택하는 것이 좋다.</p>
-    <p>Y.js는 p2p, ot 방식, CodeMirror 지원 등 장점이 있다. 현재 내가 하는 프로젝트에 바로 적용이 가능한가?</p>
-    <p>&nbsp;</p>
-    <p>ot를 검색하던 중 유사하지만 더 최신기술인 crdt가 있어 차이점을 검색해보았다. <a href="http://stackoverflow.com/questions/26694359/differences-between-ot-and-crdt" target="_blank" style="color: rgb(17, 85, 204);">OT와 CRDT 차이점</a></p>
-    <p>many OT algorithms in the literature do not satisfy convergence properties unlike what was stated by their authors</p>
-    <p>In other words CRDT merging is commutative while OT transformation functions sometimes are not.</p>
-    <p>호스트-클라이언트 방식의 문서 소유권이 뚜렷할 때는 OT 방식이 잘 작동하는데 P2P 방식, 피어 간 우선순위를 정하기 어려운 경우 OT에서 불일치가 발생할 확률이 있고 CRDT가 그 대안이라는 얘기이다.</p>
-    <p>&nbsp;</p>
-    <p>CRDT와 WebRTC(Real Time Communication) 기술을 이용하면 협업 동기화 분산처리가 가능하다.</p>
-    <p>CRDT와 WebRTC을 사용해서 개발은 한다.</p>
-    <p>그런데 모바일 사용자일 경우 접속이 지연되거나 너무 많은 데이터를 사용하는 경우 서비스를 사용하기 어렵기 때문에 하이브리드로 메인서버 접속을 열어주는 것이 필요하다.</p>
-    <p>&nbsp;</p>
-    <p>Y-js를 webrtc와 연결하는 것, websocket과 연결하는 것을 각각 만들었다.</p>
-    <p><a href="https://github.com/kifhan/rellat-beaver" target="_blank" style="color: rgb(17, 85, 204);">kifhan/Rellat-beaver</a> websocket 버전, MultiHack 없이 Y-js와 CodeMirror만 사용해서 만들었다.</p>
-    <p><a href="https://github.com/kifhan/Rellat-otter" target="_blank" style="color: rgb(17, 85, 204);">kifhan/Rellat-otter</a> webrtc 버전, Y-js와 MultiHack을 연결했다.</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2><a href="https://github.com/kifhan/Rellat-otter" target="_blank" style="color: rgb(17, 85, 204);">Rellat-otter</a> 개발 과정: Y-js + MultiHack + webRTC 협업 에디터</h2>
-    <p>MultiHack-Web을 fork해서 y-js를 연결한다.</p>
-    <p>&nbsp;</p>
-    <p><a href="http://iswebrtcreadyyet.com/" target="_blank" style="color: rgb(17, 85, 204);">iswebrtcreadyyet</a> webRTC 지원 브라우져 정리</p>
-    <p>Chrome, firefox는 pc, mobile 다 지원한다. Safari는 지원 안 한다.</p>
-    <p>Ms edge는 지원한다. Explorer는 지원 안 한다.</p>
-    <p>&nbsp;</p>
-    <p>Webrtc는 피어가 다 나가면 데이터가 유실되게 되어서 임시로 더미 피어를 붙여야 겠다.</p>
-    <p><a href="https://www.npmjs.com/package/phantomjs-prebuilt" target="_blank" style="color: rgb(17, 85, 204);">node.js Child process - phantomjs-prebuilt</a> node.js로 child process를 생성하고 관리하기</p>
-    <p>Phantomjs는 webrtc를 지원하지 않는다. Child process 만드는 방법을 참고한다.</p>
-    <p>&nbsp;</p>
-    <p>크롬을 백그라운드에서 실행해서 webRTC 의 primary peer로 설정한다. <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md" target="_blank" style="color: rgb(17, 85, 204);">Chrominum Headless</a> 참고</p>
-    <p>node js에서 구글 크롬 실행 스크립트를 만든다. <a href="https://github.com/cyrus-and/chrome-remote-interface" target="_blank" style="color: rgb(17, 85, 204);">chrome-remote-interface</a> 참고</p>
-    <p>&nbsp;</p>
-    <p>MultiHack 개발자인 Thomas Mullen @RationalCoding 과 OT에 대해서 토론한 내용</p>
-    <p><a href="https://github.com/RationalCoding/multihack-web/issues/32" target="_blank" style="color: rgb(17, 85, 204);">RationalCoding/multihack-web - issues/32</a> 버그 리포트 형태로 OT가 안되어서 에디터 동기화 충돌이 생기는 것을 문제 제기 했다.</p>
-    <p><a href="https://github.com/RationalCoding/multihack-web/issues/33" target="_blank" style="color: rgb(17, 85, 204);">RationalCoding/multihack-web - issues/33</a> @RationalCoding 이 관련 내용을 모르는 것으로 보여 관련 자료를 링크했다.</p>
-    <p><a href="https://github.com/RationalCoding/multihack-web/issues/34" target="_blank" style="color: rgb(17, 85, 204);">RationalCoding/multihack-web - issues/34</a> 동의를 얻어서 어떤 방법을 선택할지 토론하던 중 내가 직접 구현해서 보여주는 것으로 방향을 잡았다.</p>
-    <p>현재 @RationalCoding 에게 MultiHack 프로젝트의 메인 관리자 권한을 받았다.</p>
-    <p>&nbsp;</p>
-    <p>댓글을 쓸 때 개인이름과 사진을 넣을 수 있게 페이스북 로그인 기능을 연결했다.</p>
-    <p>Facebook API가 예제 중심으로 설명을 안하고 복잡하게 얽혀있어서 좀 해맸다.</p>
-    <p>&nbsp;</p><pre class="ql-syntax" spellcheck="false">// ***&nbsp;&nbsp;Facebook API v2.9 초기화하는 부분은 생략&nbsp;&nbsp;***
+  <div class="ql-editor">
+    <h1 class="ql-align-center">Rellat Job Log</h1><p><br></p><p><br></p><h2>개발 목표와 방향</h2><p><br></p><iframe class="ql-video" frameborder="0" allowfullscreen="true" src="./2nd_MockUp/scene01.html" width="1024px" height="768px"></iframe><p class="ql-align-center">2017년 2월 17일 릴랏 프로토타입 목업 데모</p><p>&nbsp;</p><iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/imJi6nFJXhQ?showinfo=0" width="853px" height="480px"></iframe><p>&nbsp;</p><p><br></p><h2>릴랏 서비스의 기술적인 구조</h2><ol><li>doc: 공동문서, 계획을 작성하는 창</li><li>board: Kanban 스타일 애자일 보드를 작성하는 창</li><li>code: 코드를 작성하는 창</li><li>log: 코드 수정사항이 기록되는 창.</li><li>branch: git 방식 가지치기를 관리하는 창</li><li>chat: gitter와 유사한 개발자 채팅을 하는 창</li><li>terminal: 가상환경의 터미널을 사용하는 창</li></ol><p>&nbsp;</p><p>&nbsp;</p><p><br></p><h2>사용자 입장에서 릴랏의 정보처리 과정</h2><p>릴랏은 사용자가 좋은 프로그래밍 습관, 즉 릴랏 사고방식을 배울 수 있게 도와주는 도구입니다.</p><ol><li>우리가 코딩 동시 협업 서비스를 사용해서 사람들에게 실시간으로 코드를 어떻게 치고 주석을 어떻게 다는지 보여주어요.</li><li class="ql-indent-1">주석을 달 때는 코드에서 무슨 일이 일어나는지 이야기로 풀어서 설명을 해주어요.</li><li class="ql-indent-1">동시 협업 프로그램은 구글문서 같은 것이에요.</li><li>우리가 코드와 주석을 쓰는 것을 보면서 힌트를 얻은 사람들이 코드와 주석을 같이 써보아요.</li><li class="ql-indent-1">인터넷 게시판, SNS처럼 코드와 주석에 댓글을 달고 의견을 교환해 보아요.</li><li class="ql-indent-1">더 나은 코드를 생각해 내면 제안을 하고 등록을 해보아요. 위키백과처럼요!</li><li>그렇게 해서 사람들이 똑똑해지고 관심이 생기면 좀 더 복잡한 오픈소스 프로젝트를 함께 해보아요.</li><li class="ql-indent-1">다른 사람들을 많이 가르쳐주고 프로젝트에 많이 기여하는 사람에게는 보상과 혜택을 주어요!</li><li class="ql-indent-1">사람들 각자 능력에 맞는 프로젝트를 추천해 주어요.</li></ol><p>&nbsp;</p><p>&nbsp;</p><p><br></p><h2>정보처리 과정기록</h2><p>시나리오 목업과 프로토타입의 기획 과정은 <a href="https://kr.rellat.com/2017/02/2.html" target="_blank" style="color: rgb(17, 85, 204);">릴랏 강의 2</a> 글을 참고하세요.</p><p><br></p><iframe class="ql-video" frameborder="0" allowfullscreen="true" src="./1st_demo_sketch/rellat_code_demo.html" width="1024px" height="768px"></iframe><p><br></p><p>소켓 서버를 사용하는 협업 코드 에디터 오픈 소스 프로젝트를 검색했다.</p><p><a href="https://github.com/search?l=JavaScript&amp;o=desc&amp;q=editor+socket&amp;s=stars&amp;type=Repositories&amp;utf8=%E2%9C%93" target="_blank" style="color: rgb(17, 85, 204);">editor with socket server</a> github 검색 결과</p><p>&nbsp;</p><p>테스트 해볼 2개의 프로젝트를 정했다. 선정 기준은 내 입장에서 분석하고 구현이 가능하고, 내가 원하는 기능이 있는지 여부였다.</p><p>1. <a href="https://github.com/kwhinnery/groupeditor" target="_blank" style="color: rgb(17, 85, 204);">Groupeditor</a> A group text editor using socket.io - github</p><p>코드가 가장 짧고 쉽다.</p><p>2. <a href="https://github.com/RationalCoding/multihack" target="_blank" style="color: rgb(17, 85, 204);">Multihack</a> Real-Time Editor, Web Host, Voice Chat, and Social Network.</p><p>프로젝트 별로 룸이 나누어진다. 파일트리가 있다. 협업 코드 에디터가 있다.</p><p>&nbsp;</p><p>위 두 프로젝트가 다 node.js와 Socket.io를 사용하고 있는데 내가 관련 개발 경험이 없었다.</p><p>Node.js 와 Socket.io 의 사용방법을 공부하려고 작은 단위 프로젝트를 기획했다.</p><p><a href="https://github.com/kifhan/FlappyConnection" target="_blank" style="color: rgb(17, 85, 204);">Flappy Connection</a> github</p><p>Node.js + Socket.io + p5.js 를 사용해서 웹온라인 게임을 만들었다. 플래피버드 카피</p><p>&nbsp;</p><p><a href="https://github.com/kwhinnery/groupeditor" target="_blank" style="color: rgb(17, 85, 204);">Groupeditor</a>를 fork하여 CodeMirror를 연결해 보았다. 원본은 Ace code editor를 사용한다.</p><p><a href="https://github.com/kifhan/groupmirror" target="_blank" style="color: rgb(17, 85, 204);">kifhan/groupmirror</a> github</p><p>에디터의 변경이 일어날 때마다 내용을 모든 클라이언트에게 전송해서 현재 상태를 동기화 하는 방식이다.</p><p>또 한글을 칠때 자소가 다 입력되기 전에 에디터 내용이 고쳐지는 것 때문에 글자가 복제 생성되거나 깨지고 흩어져서 입력되는 문제가 있다.</p><p>&nbsp;</p><p><a href="https://github.com/kifhan/multihack-web" target="_blank" style="color: rgb(3, 102, 214); background-color: rgb(255, 255, 255);">Multihack</a>을 분석해 보았다.</p><p>파일을 클라이언트 브라우저에 저장한다. 서버는 같은 room 접속자 중 같은 문서를 보고 있는 접속자들끼리 CodeMirror의 change 이벤트에서 나오는 변경내용을 보내서 동기화한다. 방 구성원이 전부 나가면 방이 자동으로 삭제된다. 한글 입력이 잘 된다.</p><p>&nbsp;</p><p><a href="https://github.com/kwhinnery/groupeditor" target="_blank" style="color: rgb(17, 85, 204);">Groupeditor</a>는 Editor node 전체의 value를 통째로 서버에 보내고 서버에서 broadcast하는 방식이다.</p><p>이렇게 하면 파일의 내용이 길어질수록 서버, 클라이언트의 통신 비용이 커지고 느려지게 된다.</p><p>어떻게 하면 비용을 적게 들이고 효율적인 통신을 할 수 있을지 생각했다.</p><p>Code 파일 1개를 커다란 맵으로 생각하고 각 줄 단위로 구분해서 변경사항이 생긴 줄 넘버와 내용을 서버로 보내 동기화하면 어떨까 상상했다.</p><p>중요한 것은 변경사항을 서버로 보내 동기화하는 것이다. Diff 툴을 사용하면 변경사항만 골라내는 것이 가능하다.</p><p>이것을 어떻게 활용할지 방법을 검색했다.</p><p><a href="http://features.jsomers.net/how-i-reverse-engineered-google-docs/" target="_blank" style="color: rgb(17, 85, 204);">how-i-reverse-engineered-google-docs</a> diff를 이용하여 구글 docs 문서 재생기를 만들었다는 내용이다.</p><p><a href="https://codemirror.net/addon/merge/merge.js" target="_blank" style="color: rgb(17, 85, 204);">Codemirror / addons / merge.js</a> CodeMirror 의 diff / merge 모듈, <a href="https://codemirror.net/demo/merge.html" target="_blank" style="color: rgb(17, 85, 204);">merge demo</a></p><p><a href="https://code.google.com/p/google-diff-match-patch/" target="_blank" style="color: rgb(17, 85, 204);">google-diff-match-patch</a> 위의 두개 소스 다 구글의 diff-match-patch를 사용했다.</p><p>&nbsp;</p><p>여기까지 생각해보니 누가 github에 비슷하게 구현해놓지 않았을까 생각이 들어서 "diff web editor collabo github" 키워드로 검색을 했다.</p><p><a href="https://github.com/sharelatex/sharelatex" target="_blank" style="color: rgb(17, 85, 204);">Sharelatex</a> open-source online real-time collaborative LaTeX editor - <a href="https://github.com/sharelatex/document-updater-sharelatex/tree/master/app/lib" target="_blank" style="color: rgb(17, 85, 204);">google diff-match-patch 를 사용</a>한다.</p><p>&nbsp;</p><p>그리고 동기화를 하는 중 트래픽 지연, 데이터 처리 시간 지연, 기타 이벤트로 문제가 발생하는 경우에는 어떻게 대처해야 하는가 하는 질문이 들었다.</p><p>&nbsp;</p><p>실시간 문서 협업 관련 동기화 기술을 리서치했다.</p><p>&nbsp;</p><p class="ql-align-center"><img src="https://lh5.googleusercontent.com/Zh-RTkd5QePr1Le4pUJYKVu1HlU9GignU5ExeQhegxmX1phBvVoqckPaP7GH7MuUa44lrn599N-pc26Lb22rDKtqUosa3jJaWXJvxTiGh33-hQpNN6HxM2a5iH1GqmHZORMmvfPA" alt="Basicot.png" height="250" width="358" style="
+    border: 1px solid;
+"></p><p>&nbsp;</p><p><a href="https://en.wikipedia.org/wiki/Operational_transformation" target="_blank" style="color: rgb(17, 85, 204);">Operational_transformation</a> Wikipedia</p><p>&nbsp;</p><p><a href="https://davidwalsh.name/collaborative-editing-javascript-intro-operational-transformation" target="_blank" style="color: rgb(17, 85, 204);">Collaborative-editing-javascript-intro-operational-transformation</a> 친절한 설명</p><p><a href="https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.CollaborativeString" target="_blank" style="color: rgb(17, 85, 204);">gapi.drive.realtime.CollaborativeString</a> Google Realtime API - google docs와 같은 구조이며 OT를 사용한다고 한다.</p><p>&nbsp;</p><p>사용하는 입장에서 볼때 OT가 하는 정보처리가 무엇인지 생각해보았다.</p><p>1. 적은 자원을 들여서 서버와 클라이언트의 문서를 실시간으로 동기화한다.</p><p>2. 문서 내용은 동기화 하면서 클라이언트의 현재 커서 위치, 선택 레인지를 유지한다.</p><p>3. Undo, Redo가 현재 클라이언트 입장에서 정상적으로 되도록 관리한다.</p><p>&nbsp;</p><p>OT의 기술적인 접근 방법이 무엇인지 생각해보았다.</p><p>1. A 클라이언트가 액션을 오브젝트로 만든다. { type: (insert, delete), index: range, value: text }</p><p>2. B 클라이언트는 자기 입장에서 A 클라이언트의 액션을 해석한다.</p><p>3. 서버는 각 클라이언트가 만들어낸 액션과 해석에 불일치가 발생하는지 확인한다.</p><p>&nbsp;</p><p>OT lib 후보 / 참고: <a href="http://stackoverflow.com/questions/2043165/operational-transformation-library" target="_blank" style="color: rgb(17, 85, 204);">Operational-transformation-library</a> - stackoverflow</p><p><a href="https://github.com/GerHobbelt/google-diff-match-patch/blob/master/javascript/diff_match_patch_uncompressed.js" target="_blank" style="color: rgb(17, 85, 204);">google diff_match_patch_uncompressed.js</a></p><p><a href="https://github.com/kpdecker/jsdiff" target="_blank" style="color: rgb(17, 85, 204);">kpdecker/jsdiff</a></p><p><a href="https://github.com/ottypes/docs" target="_blank" style="color: rgb(17, 85, 204);">ottypes/docs</a> , <a href="https://github.com/josephg/ShareJS" target="_blank" style="color: rgb(17, 85, 204);">josephg/ShareJS</a> - <a href="https://github.com/share/share-codemirror" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/share/share-codemirror</a></p><p><a href="https://github.com/Operational-Transformation/ot.js" target="_blank" style="color: rgb(17, 85, 204);">Operational-Transformation/ot.js</a> - <a href="https://github.com/miniturbo/codemirror-ot-example/blob/master/app.js" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/miniturbo/codemirror-ot-example/blob/master/app.js</a></p><p><a href="https://github.com/gulf/gulf" target="_blank" style="color: rgb(17, 85, 204);">gulf/gulf</a> - <a href="https://github.com/gulf/gulf-editor-codemirror" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/gulf/gulf-editor-codemirror</a></p><p><a href="https://github.com/y-js/yjs" target="_blank" style="color: rgb(17, 85, 204);">y-js/yjs</a> socket.io + CodeMirror 지원</p><p>&nbsp;</p><p>내 입장에서 접근이 쉬운 것, 내가 원하는 기능을 구현하기 쉬운 것을 선택하는 것이 좋다.</p><p>Y.js는 p2p, ot 방식, CodeMirror 지원 등 장점이 있다. 현재 내가 하는 프로젝트에 바로 적용이 가능한가?</p><p>&nbsp;</p><p>ot를 검색하던 중 유사하지만 더 최신기술인 crdt가 있어 차이점을 검색해보았다. <a href="http://stackoverflow.com/questions/26694359/differences-between-ot-and-crdt" target="_blank" style="color: rgb(17, 85, 204);">OT와 CRDT 차이점</a></p><p>many OT algorithms in the literature do not satisfy convergence properties unlike what was stated by their authors</p><p>In other words CRDT merging is commutative while OT transformation functions sometimes are not.</p><p>호스트-클라이언트 방식의 문서 소유권이 뚜렷할 때는 OT 방식이 잘 작동하는데 P2P 방식, 피어 간 우선순위를 정하기 어려운 경우 OT에서 불일치가 발생할 확률이 있고 CRDT가 그 대안이라는 얘기이다.</p><p>&nbsp;</p><p>CRDT와 WebRTC(Real Time Communication) 기술을 이용하면 협업 동기화 분산처리가 가능하다.</p><p>CRDT와 WebRTC을 사용해서 개발은 한다.</p><p>그런데 모바일 사용자일 경우 접속이 지연되거나 너무 많은 데이터를 사용하는 경우 서비스를 사용하기 어렵기 때문에 하이브리드로 메인서버 접속을 열어주는 것이 필요하다.</p><p>&nbsp;</p><p>Y-js를 webrtc와 연결하는 것, websocket과 연결하는 것을 각각 만들었다.</p><p><a href="https://github.com/kifhan/rellat-beaver" target="_blank" style="color: rgb(17, 85, 204);">kifhan/Rellat-beaver</a> websocket 버전, MultiHack 없이 Y-js와 CodeMirror만 사용해서 만들었다.</p><p><a href="https://github.com/kifhan/Rellat-otter" target="_blank" style="color: rgb(17, 85, 204);">kifhan/Rellat-otter</a> webrtc 버전, Y-js와 MultiHack을 연결했다.</p><p>&nbsp;</p><p>&nbsp;</p><p><br></p><h2><a href="https://github.com/kifhan/Rellat-otter" target="_blank" style="color: rgb(17, 85, 204);">Rellat-otter</a> 개발 과정: Y-js + MultiHack + webRTC 협업 에디터</h2><p>MultiHack-Web을 fork해서 y-js를 연결한다.</p><p>&nbsp;</p><p><a href="http://iswebrtcreadyyet.com/" target="_blank" style="color: rgb(17, 85, 204);">iswebrtcreadyyet</a> webRTC 지원 브라우져 정리</p><p>Chrome, firefox는 pc, mobile 다 지원한다. Safari는 지원 안 한다.</p><p>Ms edge는 지원한다. Explorer는 지원 안 한다.</p><p>&nbsp;</p><p>Webrtc는 피어가 다 나가면 데이터가 유실되게 되어서 임시로 더미 피어를 붙여야 겠다.</p><p><a href="https://www.npmjs.com/package/phantomjs-prebuilt" target="_blank" style="color: rgb(17, 85, 204);">node.js Child process - phantomjs-prebuilt</a> node.js로 child process를 생성하고 관리하기</p><p>Phantomjs는 webrtc를 지원하지 않는다. Child process 만드는 방법을 참고한다.</p><p>&nbsp;</p><p>크롬을 백그라운드에서 실행해서 webRTC 의 primary peer로 설정한다. <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md" target="_blank" style="color: rgb(17, 85, 204);">Chrominum Headless</a> 참고</p><p>node js에서 구글 크롬 실행 스크립트를 만든다. <a href="https://github.com/cyrus-and/chrome-remote-interface" target="_blank" style="color: rgb(17, 85, 204);">chrome-remote-interface</a> 참고</p><p>&nbsp;</p><p>MultiHack 개발자인 Thomas Mullen @RationalCoding 과 OT에 대해서 토론한 내용</p><p><a href="https://github.com/RationalCoding/multihack-web/issues/32" target="_blank" style="color: rgb(17, 85, 204);">RationalCoding/multihack-web - issues/32</a> 버그 리포트 형태로 OT가 안되어서 에디터 동기화 충돌이 생기는 것을 문제 제기 했다.</p><p><a href="https://github.com/RationalCoding/multihack-web/issues/33" target="_blank" style="color: rgb(17, 85, 204);">RationalCoding/multihack-web - issues/33</a> @RationalCoding 이 관련 내용을 모르는 것으로 보여 관련 자료를 링크했다.</p><p><a href="https://github.com/RationalCoding/multihack-web/issues/34" target="_blank" style="color: rgb(17, 85, 204);">RationalCoding/multihack-web - issues/34</a> 동의를 얻어서 어떤 방법을 선택할지 토론하던 중 내가 직접 구현해서 보여주는 것으로 방향을 잡았다.</p><p>현재 @RationalCoding 에게 MultiHack 프로젝트의 메인 관리자 권한을 받았다.</p><p>&nbsp;</p><p>댓글을 쓸 때 개인이름과 사진을 넣을 수 있게 페이스북 로그인 기능을 연결했다.</p><p>Facebook API가 예제 중심으로 설명을 안하고 복잡하게 얽혀있어서 좀 해맸다.</p><p>&nbsp;</p><pre class="ql-syntax" spellcheck="false">// ***&nbsp;&nbsp;Facebook API v2.9 초기화하는 부분은 생략&nbsp;&nbsp;***
 FB.api('/me', function(response) { // API가 초기화된 후 회원 ID를 먼저 불러와야 한다. 초기화 후 비동기 콜
 &nbsp;&nbsp;&nbsp;&nbsp;if(typeof response.name == 'undefined') return;
 &nbsp;&nbsp;&nbsp;&nbsp;console.log('Successful login for: '  + response.name);
@@ -257,98 +112,8 @@ FB.api('/me', function(response) { // API가 초기화된 후 회원 ID를 먼�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;);
-});</pre>
-    <p>&nbsp;</p>
-    <p>코드에 댓글을 달 수 있는 기능을 개발하여 연결했다.</p>
-    <p>코드 붙이는 부분이 프로토타입 작업할 때는 동기화 생각을 안하니까 간단했는데 동기화를 하면서 별도의 댓글 모듈을 붙이려고 하니까 로직에서 꼬이는 부분이 있었다.</p>
-    <p>댓글 데이터를 구분하는 방법을 문서 파일 경로, 문서 내의 줄 번호, 댓글 DOM ID로 만들었다.</p>
-    <p>그런데 코드 에디터에서 줄바꿈을 하면 댓글이 달린 줄이 줄바뀜 되면서 댓글 데이터의 실제 줄번호가 바뀐다. 그래서 에디터 내용이 수정될 때 이벤트를 받아서 줄번호가 바뀔 때 마다 댓글 데이터를 뒤져서 줄번호를 변경해 줘야 한다.</p>
-    <p>문제는 Y-js Array 타입이 데이터 Insert, Delete만 할 수 있고 Update가 안되어서 고치려면 Delete하고 다시 Insert해야 하는데 이 과정에서 불필요한 동기화가 일어나면서 오류를 유발한다.</p>
-    <p>아예 Y-Map이나 기타 Update가 가능한 타입을 사용하거나 댓글 데이터 구분방법을 다르게 만들거나 생각해봐야겠다.</p>
-    <p>댓글 dom ID만 가지고 에디터 안의 줄번호를 호출하려면 어떻게 해야하나? 줄번호로 구별하도록 했기때문에 줄번호를 빼고 댓글 데이터를 구분할 수 없다.</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2>Rellat Alpha v0.1 별명(코드명): Otter(수달) 릴리즈</h2>
-    <iframe class="ql-video" frameborder="0" allowfullscreen="true" src="http://ide.rellat.com/"></iframe>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <p>릴랏 알파 버전 공지</p>
-    <p>Rellat Alpha v0.1 별명(코드명): Otter(수달)를 릴리즈 했습니다.</p>
-    <p><a href="http://ide.rellat.com/" target="_blank" style="color: rgb(17, 85, 204);">http://ide.rellat.com</a></p>
-    <p>&nbsp;</p>
-    <p>어떻게 만들었나요?</p>
-    <p>공개된 오픈소스 프로젝트 중 소스를 이해하기 쉽고 고쳐서 사용하기 쉽다고 판단한 MultiHack이란 프로젝트를 기반으로 해서 개발을 시작했습니다.</p>
-    <p>기존 MultiHack에서 부족한 실시간 데이터 동기화, 동기화 중 충돌이 발생하여 클라이언트 간 작업 문서 내용이 다르게 되는 문제 등을 해결하려고 Y-js라는 문서 동기화(CRDT) 모듈을 연결하였습니다. 현재 우리가 MultiHack 프로젝트의 메인 관리자, 코어 디벨로퍼 권한을 가지고 있습니다.</p>
-    <p>코드에 댓글을 달 수 있는 기능을 개발하여 연결했습니다.</p>
-    <p>댓글을 쓸 때 개인이름과 사진을 넣을 수 있게 페이스북 로그인 기능을 연결했습니다.</p>
-    <p>&nbsp;</p>
-    <p>무엇을 할 수 있나요?</p>
-    <p>현재 ide.rellat.com으로 접속하면 자동으로 "rellat-dev-v0.1" 룸에 접속합니다.</p>
-    <p>Project Files에서 폴더, 파일을 생성할 수 있습니다.</p>
-    <p>로컬 컴퓨터에서 파일을 업로드 하기, github 등 저장소에서 파일을 가져오기 등은 현재 지원하지 않습니다. 앞으로 지원할 예정입니다.</p>
-    <p>현재 javascript, html, css 등 파일은 코드 구문 색강조(Syntex highlighting)가 됩니다. 다른 언어는 아직 하이라이팅을 지원 안 합니다. 앞으로 지원할 예정입니다.</p>
-    <p>코드 에디터에서 여러 사용자가 실시간으로 댓글을 작성할 수 있습니다. 댓글은 현재 1단계만 쓸 수 있고 댓글 밑에 답글은 달 수 없습니다. 앞으로는 대댓글 기능을 지원할 예정입니다.</p>
-    <p>현재 rellat otter는 webrtc라는 기술을 기반으로 작동합니다. webrtc는 peer to peer 방식의 웹 통신 규격으로 서버와의 연결이 단절되어도 클라이언트끼리 상호 통신이 가능합니다.</p>
-    <p>또한 rellat otter는 서버에서 Database 시스템을 운영하지 않습니다.</p>
-    <p>향후 사용자의 옵션 정보 저장, 사용 로그 기록, 기타 편의기능 제공을 위해서 중앙 서버 시스템을 추가로 만들 것입니다. 쉽게 말해서 이론적으로는 중앙 서버 없이도 작동하는 서비스인데 앞으로 편의를 위해서 중앙 서버를 추가하겠다는 말입니다.</p>
-    <p>&nbsp;</p>
-    <p>지금까지 발생한 문제점은 무엇인가요?</p>
-    <p>사이드바 크기 조정을 할수 없습니다.</p>
-    <p>서버에서 파일을 저장하지 않기 때문에 모든 접속자가 룸에서 접속을 끊을 경우 데이터가 유실됩니다. 현재는 이기준님의 자택에서 작동하는 서버에서 더미 클라이언트를 만들어서 "rellat-dev-v0.1" 룸의 정보를 유지하고 있습니다.</p>
-    <p>앞으로 버전 업을 할 때마다 데이터를 초기화 하는 일이 일어날 수 있습니다. 중요한 자료는 반드시 백업하세요.</p>
-    <p>&nbsp;</p>
-    <p>앞으로 무엇을 개선할 것인가요?</p>
-    <p>마이너 업데이트</p>
-    <p>대댓글 기능 지원</p>
-    <p>다양한 언어 스타일 하이라이트 지원</p>
-    <p>로컬 파일 업로드 지원</p>
-    <p>깃허브 업로드 지원</p>
-    <p>메이저 업데이트</p>
-    <p>개인 계정 활동 기록 저장</p>
-    <p>Rellat Doc, Rellat Chat, Rellat Board 등 추가 기능을 개발하고 탑재하기</p>
-    <p>깃허브 자동 업로드 기능</p>
-    <p>버전관리와 투표 기능</p>
-    <p>딥러닝 응용</p>
-    <p>메이저 업데이트 과제를 전부 충족하고 나면 1.0 버전이 될 것입니다. 아마 앞으로 2~3개월 정도 걸릴 것으로 보입니다.</p>
-    <p>github link <a href="https://github.com/kifhan/Rellat-otter" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/kifhan/Rellat-otter</a></p>
-    <p><br></p>
-    <p><br></p>
-    <p>&nbsp;</p>
-    <p>현재까지 발견된 버그는 아래와 같다.</p>
-    <ol>
-      <li>모바일 화면에서 댓글 작성하려고 글을 쓰면 글이 댓글 창 밖에 써지는 문제</li>
-      <li>파일을 왔다갔다하면 댓글이 중복되서 나오는 경우가 있다.</li>
-      <li>파일을 만들고 왔다갔다 하다가 갑자기 룸 동기화가 풀려버리는 경우가 있다.</li>
-    </ol>
-    <p>&nbsp;</p>
-    <p>댓글 기능 로직을 고칠 때 Delete하고 다시 insert하는 방식이 아니고 바뀔때마다 바뀐 내용을 insert해서 쌓아나가면 어떨까? Ot개념과 같다.</p>
-    <p>줄바꿈 정보를 delta로 만들어서 보낸다. 절대 줄번호가 아니라 상대적으로 몇줄 추가되었는지 혹은 제거되었는지 보낸다.</p>
-    <p>현재 상태를 받을 때 동기화된 최신상태를 정리해서 받아야 한다.</p>
-    <p>&nbsp;</p>
-    <ol>
-      <li>Y-array로 파일마다 댓글db 만들기</li>
-      <li class="ql-indent-1">P2p&nbsp;json 방식이다.</li>
-      <li class="ql-indent-1">실시간 추가, 입력 상태 추적 등을 할 때 더 효과적이다.</li>
-      <li>별도 댓글 db 만들고 Ajax로 호출하기&nbsp;</li>
-      <li class="ql-indent-1">Sql 혹은 질의 검색 방식이다.</li>
-      <li class="ql-indent-1">데이터를 저장, 보관할 때 효과적이다.</li>
-    </ol>
-    <p>&nbsp;</p>
-    <p>Y-text 타입 코드를 분석해 보고 어떻게 하는지 알아보자.</p>
-    <p><a href="http://y-js.org/y-element/components/y-element/" target="_blank" style="color: rgb(17, 85, 204);">y-js / y-element</a> -&gt; Demo -&gt; Shared Elements 예제를 보면 y-map 타입으로 개별 elements를 실시간 동기화하고 있다. 댓글의 현재 줄 번호를 업데이트 하는 것도 이 방식으로 할 수 있다.</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2>릴랏 개발 보드 공개</h2>
-    <p><a href="https://trello.com/b/kzeGNsNL/rellat-dev-public" target="_blank" style="color: rgb(17, 85, 204);">Rellat Dev Public - Trello</a></p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br></p>
-    <h2>개발 중 이루어진 릴랏 회원들과의 토론</h2>
-    <p><a href="https://www.facebook.com/groups/rellatkoreangruop/permalink/1592884827389560/" target="_blank" style="color: rgb(17, 85, 204);">댓글 삭제와 리비전 관련 토론 </a></p>
-    <p><br></p>
-  </div>
+});
+</pre><p>&nbsp;</p><p>코드에 댓글을 달 수 있는 기능을 개발하여 연결했다.</p><p>코드 붙이는 부분이 프로토타입 작업할 때는 동기화 생각을 안하니까 간단했는데 동기화를 하면서 별도의 댓글 모듈을 붙이려고 하니까 로직에서 꼬이는 부분이 있었다.</p><p>댓글 데이터를 구분하는 방법을 문서 파일 경로, 문서 내의 줄 번호, 댓글 DOM ID로 만들었다.</p><p>그런데 코드 에디터에서 줄바꿈을 하면 댓글이 달린 줄이 줄바뀜 되면서 댓글 데이터의 실제 줄번호가 바뀐다. 그래서 에디터 내용이 수정될 때 이벤트를 받아서 줄번호가 바뀔 때 마다 댓글 데이터를 뒤져서 줄번호를 변경해 줘야 한다.</p><p>문제는 Y-js Array 타입이 데이터 Insert, Delete만 할 수 있고 Update가 안되어서 고치려면 Delete하고 다시 Insert해야 하는데 이 과정에서 불필요한 동기화가 일어나면서 오류를 유발한다.</p><p>아예 Y-Map이나 기타 Update가 가능한 타입을 사용하거나 댓글 데이터 구분방법을 다르게 만들거나 생각해봐야겠다.</p><p>댓글 dom ID만 가지고 에디터 안의 줄번호를 호출하려면 어떻게 해야하나? 줄번호로 구별하도록 했기때문에 줄번호를 빼고 댓글 데이터를 구분할 수 없다.</p><p><br></p><p><br></p><p><br></p><h2>Rellat Alpha v0.1 별명(코드명): Otter(수달) 릴리즈</h2><iframe class="ql-video" frameborder="0" allowfullscreen="true" src="http://ide.rellat.com/" width="1024px" height="768px"></iframe><p>&nbsp;</p><p>릴랏 알파 버전 공지</p><p>Rellat Alpha v0.1 별명(코드명): Otter(수달)를 릴리즈 했습니다.</p><p><a href="http://ide.rellat.com/" target="_blank" style="color: rgb(17, 85, 204);">http://ide.rellat.com</a></p><p>&nbsp;</p><p>어떻게 만들었나요?</p><p>공개된 오픈소스 프로젝트 중 소스를 이해하기 쉽고 고쳐서 사용하기 쉽다고 판단한 MultiHack이란 프로젝트를 기반으로 해서 개발을 시작했습니다.</p><p>기존 MultiHack에서 부족한 실시간 데이터 동기화, 동기화 중 충돌이 발생하여 클라이언트 간 작업 문서 내용이 다르게 되는 문제 등을 해결하려고 Y-js라는 문서 동기화(CRDT) 모듈을 연결하였습니다. 현재 우리가 MultiHack 프로젝트의 메인 관리자, 코어 디벨로퍼 권한을 가지고 있습니다.</p><p>코드에 댓글을 달 수 있는 기능을 개발하여 연결했습니다.</p><p>댓글을 쓸 때 개인이름과 사진을 넣을 수 있게 페이스북 로그인 기능을 연결했습니다.</p><p>&nbsp;</p><p>무엇을 할 수 있나요?</p><p>현재 ide.rellat.com으로 접속하면 자동으로 "rellat-dev-v0.1" 룸에 접속합니다.</p><p>Project Files에서 폴더, 파일을 생성할 수 있습니다.</p><p>로컬 컴퓨터에서 파일을 업로드 하기, github 등 저장소에서 파일을 가져오기 등은 현재 지원하지 않습니다. 앞으로 지원할 예정입니다.</p><p>현재 javascript, html, css 등 파일은 코드 구문 색강조(Syntex highlighting)가 됩니다. 다른 언어는 아직 하이라이팅을 지원 안 합니다. 앞으로 지원할 예정입니다.</p><p>코드 에디터에서 여러 사용자가 실시간으로 댓글을 작성할 수 있습니다. 댓글은 현재 1단계만 쓸 수 있고 댓글 밑에 답글은 달 수 없습니다. 앞으로는 대댓글 기능을 지원할 예정입니다.</p><p>현재 rellat otter는 webrtc라는 기술을 기반으로 작동합니다. webrtc는 peer to peer 방식의 웹 통신 규격으로 서버와의 연결이 단절되어도 클라이언트끼리 상호 통신이 가능합니다.</p><p>또한 rellat otter는 서버에서 Database 시스템을 운영하지 않습니다.</p><p>향후 사용자의 옵션 정보 저장, 사용 로그 기록, 기타 편의기능 제공을 위해서 중앙 서버 시스템을 추가로 만들 것입니다. 쉽게 말해서 이론적으로는 중앙 서버 없이도 작동하는 서비스인데 앞으로 편의를 위해서 중앙 서버를 추가하겠다는 말입니다.</p><p>&nbsp;</p><p>지금까지 발생한 문제점은 무엇인가요?</p><p>사이드바 크기 조정을 할수 없습니다.</p><p>서버에서 파일을 저장하지 않기 때문에 모든 접속자가 룸에서 접속을 끊을 경우 데이터가 유실됩니다. 현재는 이기준님의 자택에서 작동하는 서버에서 더미 클라이언트를 만들어서 "rellat-dev-v0.1" 룸의 정보를 유지하고 있습니다.</p><p>앞으로 버전 업을 할 때마다 데이터를 초기화 하는 일이 일어날 수 있습니다. 중요한 자료는 반드시 백업하세요.</p><p>&nbsp;</p><p>앞으로 무엇을 개선할 것인가요?</p><p>마이너 업데이트</p><p>대댓글 기능 지원</p><p>다양한 언어 스타일 하이라이트 지원</p><p>로컬 파일 업로드 지원</p><p>깃허브 업로드 지원</p><p>메이저 업데이트</p><p>개인 계정 활동 기록 저장</p><p>Rellat Doc, Rellat Chat, Rellat Board 등 추가 기능을 개발하고 탑재하기</p><p>깃허브 자동 업로드 기능</p><p>버전관리와 투표 기능</p><p>딥러닝 응용</p><p>메이저 업데이트 과제를 전부 충족하고 나면 1.0 버전이 될 것입니다. 아마 앞으로 2~3개월 정도 걸릴 것으로 보입니다.</p><p>github link <a href="https://github.com/kifhan/Rellat-otter" target="_blank" style="color: rgb(17, 85, 204);">https://github.com/kifhan/Rellat-otter</a></p><p><br></p><p>현재까지 발견된 버그는 아래와 같다.</p><ol><li>모바일 화면에서 댓글 작성하려고 글을 쓰면 글이 댓글 창 밖에 써지는 문제</li><li>파일을 왔다갔다하면 댓글이 중복되서 나오는 경우가 있다.</li><li>파일을 만들고 왔다갔다 하다가 갑자기 룸 동기화가 풀려버리는 경우가 있다.</li></ol><p>&nbsp;</p><p>댓글 기능 로직을 고칠 때 Delete하고 다시 insert하는 방식이 아니고 바뀔때마다 바뀐 내용을 insert해서 쌓아나가면 어떨까? Ot개념과 같다.</p><p>줄바꿈 정보를 delta로 만들어서 보낸다. 절대 줄번호가 아니라 상대적으로 몇줄 추가되었는지 혹은 제거되었는지 보낸다.</p><p>현재 상태를 받을 때 동기화된 최신상태를 정리해서 받아야 한다.</p><p>&nbsp;</p><ol><li>Y-array로 파일마다 댓글db 만들기</li><li class="ql-indent-1">P2p&nbsp;json 방식이다.</li><li class="ql-indent-1">실시간 추가, 입력 상태 추적 등을 할 때 더 효과적이다.</li><li>별도 댓글 db 만들고 Ajax로 호출하기&nbsp;</li><li class="ql-indent-1">Sql 혹은 질의 검색 방식이다.</li><li class="ql-indent-1">데이터를 저장, 보관할 때 효과적이다.</li></ol><p>&nbsp;</p><p>Y-text 타입 코드를 분석해 보고 어떻게 하는지 알아보자.</p><p><a href="http://y-js.org/y-element/components/y-element/" target="_blank" style="color: rgb(17, 85, 204);">y-js / y-element</a> -&gt; Demo -&gt; Shared Elements 예제를 보면 y-map 타입으로 개별 elements를 실시간 동기화하고 있다. 댓글의 현재 줄 번호를 업데이트 하는 것도 이 방식으로 할 수 있다.</p><p>&nbsp;</p><p>&nbsp;</p><p><br></p><h2>릴랏 개발 보드 공개</h2><p><a href="https://trello.com/b/kzeGNsNL/rellat-dev-public" target="_blank" style="color: rgb(17, 85, 204);">Rellat Dev Public - Trello</a></p><p>&nbsp;</p><p>&nbsp;</p><p><br></p><h2>개발 중 이루어진 릴랏 회원들과의 토론</h2><p><a href="https://www.facebook.com/groups/rellatkoreangruop/permalink/1592884827389560/" target="_blank" style="color: rgb(17, 85, 204);">댓글 삭제와 리비전 관련 토론 </a></p><p><br></p></div>
 
   <script type="text/javascript">
     var Delta = Quill.import('delta');
